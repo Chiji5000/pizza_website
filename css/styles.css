@@ -1,0 +1,846 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+.navbar-brand {
+  color: var(--text-color);
+  background-color: var(--navbar-color);
+  font-weight: bold;
+  font-size: 25px;
+  border: 3px solid;
+  padding: 3px;
+  margin-left: 10px;
+
+  animation: background-slid 20s infinite;
+}
+
+@keyframes background-slid {
+  0% {
+    border: 3px solid gold;
+    color: gold;
+    background-color: yellow;
+  }
+  20% {
+    border: 3px solid goldenrod;
+    color: goldenrod;
+    background-color: gold;
+  }
+  40% {
+    border: 3px solid blue;
+    color: blue;
+    background-color: lightblue;
+  }
+  60% {
+    border: 3px solid red;
+    color: red;
+    background-color: lightcoral;
+  }
+  80% {
+    border: 3px solid green;
+    color: green;
+    background-color: lightgreen;
+  }
+  100% {
+    border: 3px solid white;
+    color: white;
+    background-color: #666;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+section {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+ 
+  font-size: large;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-slider {
+  width: 50%;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("../image/istockphoto-1756562035-1024x1024.jpg");
+  }
+  33% {
+    background-image: url("../image/istockphoto-1444761870-1024x1024.jpg");
+  }
+  66% {
+    background-image: url("../image/istockphoto-1459014910-1024x1024.jpg");
+  }
+  100% {
+    background-image: url("../image/istockphoto-1756562035-1024x1024.jpg");
+  }
+}
+
+.text {
+  width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .image-slider {
+    height: 290px;
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) {
+}
+.text {
+  width: 50%;
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+}
+footer {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px; 
+}
+
+.footer-content p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.social-media,
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.social-media li a,
+.footer-links li a {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 40%;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.social-media li a i {
+  margin-right: 8px;
+}
+
+.social-media li a:hover,
+.footer-links li a:hover {
+  color: #1da1f2; 
+}
+
+/* General styling for icons */
+.social-media li a i {
+  font-size: 20px; 
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.social-media li a:hover i {
+  color: #1da1f2;
+  transform: scale(1.2); 
+}
+
+/* Individual icon colors (if needed) */
+.social-media li a .fa-facebook-f {
+  color: #3b5998; /* Facebook blue */
+}
+
+.social-media li a .fa-twitter {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.social-media li a .fa-instagram {
+  color: #e4405f; /* Instagram gradient starting color */
+}
+
+.social-media li a .fa-linkedin-in {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+/* Responsive styling */
+
+@media (max-width: 480px) {
+  .footer-content p {
+    font-size: 14px; /* Smaller text for very small screens */
+  }
+
+  .social-media li a,
+  .footer-links li a {
+    font-size: 12px; /* Smaller text for links */
+    padding: 8px;
+  }
+
+  .social-media li a i {
+    font-size: 18px; /* Adjust icon size for small screens */
+  }
+}
+#about {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#about h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#about p {
+  margin-bottom: 20px;
+}
+
+#about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#about li {
+  margin-bottom: 10px;
+}
+
+#about table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#about th,
+#about td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#about th {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  #about {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  #about h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  #about p {
+    margin-bottom: 20px;
+  }
+
+  #about ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  #about table {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  #about th, 
+  #about td {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  #about h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  #about h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  #about p {
+    margin-bottom: 15px;
+  }
+
+  #about ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  #about table {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+
+  #about th, 
+  #about td {
+    padding: 5px;
+  }
+}
+#academics {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#academics h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#academics h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#academics p {
+  margin-bottom: 20px;
+}
+
+#academics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#academics li {
+  margin-bottom: 10px;
+}
+
+.departments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.department {
+  width: 40%;
+  margin: 20px;
+  padding: 70px;
+  color: black;
+
+  /* border: 1px solid #ddd; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  font-size: large;
+  font-weight: bold;
+}
+
+.department h4 {
+  color: #337ab7;
+  margin-top: 0;
+}
+#parents {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#parents h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#parents h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#parents p {
+  margin-bottom: 20px;
+}
+
+#parents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#parents li {
+  margin-bottom: 10px;
+}
+
+.policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.policy {
+  padding: 5px;
+  width: 30%;
+  margin: 20px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.policy h4 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .policies {
+    flex-direction: column;
+  }
+  .policy {
+    width: 90%;
+    margin: 10px;
+  }
+}
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin-right: 0;
+  }
+  main {
+    padding: 10px;
+  }
+  section {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Tablets (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    margin-right: 10px;
+  }
+  main {
+    padding: 20px;
+  }
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+#students {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#students h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#students h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#students p {
+  margin-bottom: 20px;
+}
+
+#students ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#students li {
+  margin-bottom: 10px;
+}
+
+/* .resources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+.resource {
+  padding: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.8);
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the image within the container */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: scroll; /* Makes sure the background scrolls with the content */
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Medium and larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+  .resource {
+    padding: 70px;
+  }
+}
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 767px) {
+  .resource {
+    padding: 70px;
+  }
+}
+.resource h4 {
+  color: #337ab7;
+
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .resources {
+    flex-direction: column;
+  }
+  .resource {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+/* Desktop devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+  /* No changes needed, as the desktop layout is already defined */
+}
+@media (max-width: 768px) {
+  .departments {
+    flex-direction: column;
+  }
+  .department {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .galleries {
+    flex-direction: column;
+  }
+  .gallery {
+    width: 80%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #academics h2 {
+    font-size: 24px;
+  }
+  #academics h3 {
+    font-size: 18px;
+  }
+  #academics p {
+    font-size: 14px;
+  }
+}
+#contact {
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 96%;
+}
+
+#contact h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #23527c;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+  }
+  .contact-form {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    padding: 5px;
+  }
+  .contact-form button {
+    padding: 5px;
+  }
+}
+#admissions {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 96%;
+}
+
+#admissions h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#admissions h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#admissions p {
+  margin-bottom: 20px;
+}
+
+#admissions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#admissions li {
+  margin-bottom: 10px;
+}
+
+#admissions table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#admissions th,
+#admissions td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  #admissions table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #admissions h2 {
+    font-size: 24px;
+  }
+  #admissions h3 {
+    font-size: 18px;
+  }
+}
+#resources {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 96%;
+}
+
+#resources h2 {
+  color: #337ab7;
+  margin-top: 0;
+}
+
+#resources h3 {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin-bottom: 10px;
+}
+
+#resources p {
+  margin-bottom: 20px;
+}
+
+#resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#resources li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #resources ul {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #resources h2 {
+    font-size: 24px;
+  }
+  #resources h3 {
+    font-size: 18px;
+  }
+}
+/* Define the fade-in keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in animation to all class groups */
+body, main, section, .container, .text, footer, 
+.footer-content, .social-media li a, .footer-links li a, #about, #academics, .departments, .department, 
+#parents, .policies, .policy, #students, .resource, #contact, .contact-info, .contact-form, 
+#admissions, #resources {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Additional fade-in for responsive elements */
+@media (max-width: 768px) {
+   .text, .policies, .policy, .resources, .resource, .departments, .department, .galleries, .gallery, .contact-info, .contact-form {
+    animation: fadeIn 2s ease-in-out;
+  }
+}
+
+@media (max-width: 480px) {
+  #academics, #admissions, #resources {
+    animation: fadeIn 2s ease-in-out;
+  }
+}
